@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         let taxRate          = Double(taxRate_textField.text!) ?? 0
         let taxExcludedPrice = Double(taxExcludedPrice_textField.text!) ?? 0
         let taxIncludedPrice = Int(taxExcludedPrice + (taxExcludedPrice  * (taxRate * 0.01)))
-//      let taxIncludedPrice = Int(taxExcludedPrice  * (1.0 + (taxRate / 100)))
+//        let taxIncludedPrice = Int(taxExcludedPrice  * (1.0 + (taxRate / 100)))
         
         //UserDefaultに保存
         ud.set(String(taxRate), forKey: "taxRate")
