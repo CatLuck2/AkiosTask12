@@ -19,11 +19,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //UserDefaultに消費税率が保存されてるか
-        guard let taxRateString = ud.object(forKey: "taxRate") as? Int else {
-            taxRate_textField.text = ""
-            return
-        }
-        taxRate_textField.text = String(taxRateString)
+        taxRate_textField.text = (ud.object(forKey: "taxRate") as? String) ?? ""
     }
 
     @IBAction private func calcTaxIncludedPrice_button(_ sender: Any) {
@@ -31,9 +27,10 @@ class ViewController: UIViewController {
         let taxRate          = Double(taxRate_textField.text!) ?? 0
         let taxExcludedPrice = Double(taxExcludedPrice_textField.text!) ?? 0
         let taxIncludedPrice = Int(taxExcludedPrice + (taxExcludedPrice  * (taxRate * 0.01)))
+//      let taxIncludedPrice = Int(taxExcludedPrice  * (1.0 + (taxRate / 100)))
         
         //UserDefaultに保存
-        ud.set(taxRate, forKey: "taxRate")
+        ud.set(String(taxRate), forKey: "taxRate")
         //UIlabelに税込金額を表示
         taxIncludedPrice_label.text = String(taxIncludedPrice)
     }
