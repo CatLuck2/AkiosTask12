@@ -54,7 +54,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="計算"/>
                                 <connections>
-                                    <action selector="calcTaxIncludedPrice_button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="is7-WM-jJJ"/>
+                                    <action selector="calcTaxIncludedPriceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PZh-23-GeF"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKP-v3-IQ1">
@@ -68,9 +68,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="taxExcludedPrice_textField" destination="LKP-v3-IQ1" id="zgb-uj-3ro"/>
-                        <outlet property="taxIncludedPrice_label" destination="p9r-Hc-Fud" id="NFO-ig-XKa"/>
-                        <outlet property="taxRate_textField" destination="yH8-pS-e0b" id="fSO-Di-Ifi"/>
+                        <outlet property="taxExcludedPriceTextField" destination="LKP-v3-IQ1" id="WHY-ne-toY"/>
+                        <outlet property="taxIncludedPriceLabel" destination="p9r-Hc-Fud" id="NKO-oB-gZk"/>
+                        <outlet property="taxRateTextField" destination="yH8-pS-e0b" id="IVK-Aq-nXa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
